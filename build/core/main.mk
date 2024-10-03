@@ -1,2 +1,2 @@
-# Include Project Blaze versions
-include $(TOPDIR)vendor/blaze/build/core/main_version.mk
+# Include Project Moto versions
+include $(TOPDIR)vendor/moto/build/core/main_version.mk

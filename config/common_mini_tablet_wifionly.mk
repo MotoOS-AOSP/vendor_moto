@@ -1,5 +1,5 @@
-# Inherit mobile mini common Blaze stuff
-$(call inherit-product, vendor/blaze/config/common_mobile_mini.mk)
+# Inherit mobile mini common moto stuff
+$(call inherit-product, vendor/moto/config/common_mobile_mini.mk)
 
-# Inherit tablet common Blaze stuff
-$(call inherit-product, vendor/blaze/config/tablet.mk)
+# Inherit tablet common moto stuff
+$(call inherit-product, vendor/moto/config/tablet.mk)

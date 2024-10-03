@@ -33058,14 +33058,14 @@
       mvno_match_data="NORVADO WIRELESS RPT"
   />
 
-  <apn carrier="Blaze"
+  <apn carrier="Moto"
       mcc="311"
       mnc="530"
       apn="mms.mymobiletxt.com"
       mmsc="http://mms2.mymobiletxt.net"
       type="default,mms"
       mvno_type="spn"
-      mvno_match_data="BLAZE WIRELESS"
+      mvno_match_data="Moro WIRELESS"
   />
 
   <apn carrier="Duet Internet"

@@ -1,7 +1,7 @@
-include vendor/blaze/config/BoardConfigKernel.mk
+include vendor/moto/config/BoardConfigKernel.mk
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-include vendor/blaze/config/BoardConfigQcom.mk
+include vendor/moto/config/BoardConfigQcom.mk
 endif
 
-include vendor/blaze/config/BoardConfigSoong.mk
+include vendor/moto/config/BoardConfigSoong.mk

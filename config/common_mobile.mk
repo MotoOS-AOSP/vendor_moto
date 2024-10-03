@@ -1,5 +1,5 @@
-# Inherit common mobile Blaze stuff
-$(call inherit-product, vendor/blaze/config/common.mk)
+# Inherit common mobile moto stuff
+$(call inherit-product, vendor/moto/config/common.mk)
 
 # Themes
 PRODUCT_PACKAGES += \

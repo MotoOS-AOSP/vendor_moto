@@ -1,5 +1,5 @@
-# Inherit common Blaze stuff
-$(call inherit-product, vendor/blaze/config/common_mobile.mk)
+# Inherit common moto stuff
+$(call inherit-product, vendor/moto/config/common_mobile.mk)
 
 PRODUCT_SIZE := full
 
@@ -36,6 +36,6 @@ PRODUCT_PACKAGES += \
     FontLatoOverlay \
     FontRubikOverlay
 
-# Include Blaze LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/blaze/overlay/dictionaries
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/blaze/overlay/dictionaries
+# Include moto LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/moto/overlay/dictionaries
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/moto/overlay/dictionaries
