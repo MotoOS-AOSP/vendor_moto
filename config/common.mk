@@ -125,8 +125,6 @@ $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 endif
 
-WITH_GAPPS := true # Gapps as default on motoOS
-
 # Google Photos Pixel Exclusive XML
 PRODUCT_COPY_FILES += \
     vendor/moto/prebuilt/common/etc/sysconfig/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
