@@ -121,7 +121,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Gapps
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
-$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
+# $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 
 # Google Photos Pixel Exclusive XML
 PRODUCT_COPY_FILES += \
