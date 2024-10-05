@@ -292,11 +292,6 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 
 include vendor/moto/config/version.mk
 
-# Sounds (default)
-PRODUCT_PROPERTY_OVERRIDES := \
-    ro.config.ringtone=vibe.ogg \
-    ro.config.alarm_alert=MorningAlarm.ogg
-
 # PocketMode
 PRODUCT_PACKAGES += \
     PocketMode
