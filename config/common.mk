@@ -5,13 +5,6 @@ PRODUCT_BRAND ?= MotoOS-AOSP
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-# Verificar si el dispositivo es compatible con ARM64
-ifeq ($(TARGET_ARCH), arm64)
-  $(info Este dispositivo soporta arquitectura de 64 bits: $(TARGET_ARCH))
-else
-  $(error Esta ROM solo soporta dispositivos con arquitectura de 64 bits ARM64. La arquitectura de tu dispositivo es: $(TARGET_ARCH))
-endif
-
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
