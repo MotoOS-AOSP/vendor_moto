@@ -5,6 +5,14 @@ PRODUCT_BRAND ?= MotoOS-AOSP
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
+# Verificar si el dispositivo es compatible con ARM64
+ifeq ($(TARGET_ARCH), arm64)
+  $(info Este dispositivo soporta arquitectura de 64 bits: $(TARGET_ARCH))
+else
+  $(error Esta ROM solo soporta dispositivos con arquitectura de 64 bits ARM64. La arquitectura de tu dispositivo es: $(TARGET_ARCH))
+endif
+
+
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=android-google
@@ -120,10 +128,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
 # Gapps
-ifeq ($(WITH_GAPPS),true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
-$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
-endif
+WITH_GMS := true
 
 # Google Photos Pixel Exclusive XML
 PRODUCT_COPY_FILES += \
@@ -169,12 +175,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images_vendor_pixel
 
-# Call Recording
-TARGET_CALL_RECORDING_SUPPORTED ?= true
-ifneq ($(TARGET_CALL_RECORDING_SUPPORTED),false)
+# Call Recording pixel feature for Dialer
 PRODUCT_COPY_FILES += \
     vendor/moto/config/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
-endif
 
 # Certification
 $(call inherit-product-if-exists, vendor/certification/config.mk)
