@@ -294,5 +294,9 @@ PRODUCT_COPY_FILES += \
 include vendor/moto/config/ota.mk
 include vendor/moto/config/packages.mk
 
+
+# Moto libs
+$(call inherit-product, vendor/motorola/MotoSignatureApp/motosignatureapp.mk)
+
 # Moto Game Mode
 $(call inherit-product, vendor/motorola/GameMode/gamemode.mk)
