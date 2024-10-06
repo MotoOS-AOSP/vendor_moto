@@ -296,3 +296,6 @@ $(call inherit-product, vendor/motorola/MotoSignatureApp/motosignatureapp.mk)
 
 # Moto Game Mode
 $(call inherit-product, vendor/motorola/GameMode/gamemode.mk)
+
+# Moto Time Weather
+$(call inherit-product, vendor/motorola/TimeWeather/timeweather.mk)
