@@ -122,10 +122,6 @@ endif
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
-# Gapps
-$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
-WITH_GMS := true
-
 # Google Photos Pixel Exclusive XML
 PRODUCT_COPY_FILES += \
     vendor/moto/prebuilt/common/etc/sysconfig/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
