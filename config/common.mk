@@ -168,9 +168,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images_vendor_pixel
 
-# Call Recording pixel feature for Dialer
-PRODUCT_COPY_FILES += \
-    vendor/moto/config/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
 
 # Certification
 $(call inherit-product-if-exists, vendor/certification/config.mk)
@@ -293,5 +290,4 @@ PRODUCT_COPY_FILES += \
     vendor/moto/pocket/privapp-permissions-pocketmode.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-pocketmode.xml
 
 include vendor/moto/config/ota.mk
-include vendor/moto/config/pixel_props.mk
 include vendor/moto/config/packages.mk

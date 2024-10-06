@@ -1,15 +1,9 @@
 # GMS
-ifeq ($(WITH_GMS),true)
 WITH_GMS_COMMS_SUITE := true
-endif
 
 # Sensitive Phone Numbers list
 PRODUCT_COPY_FILES += \
     vendor/moto/prebuilt/common/etc/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
-	
-# World APN list
-PRODUCT_PACKAGES += \
-    apns-conf.xml
 
 # Telephony packages
 PRODUCT_PACKAGES += \
@@ -22,5 +16,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     net.tethering.noprovisioning=true
 
 # Disable mobile data by default
-PRODUCT_PRODUCT_PROPERTIES += \
+#PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.android.mobiledata=false
+
+# Pixel APNs
+PRODUCT_COPY_FILES += \
+    vendor/moto/telephony/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+
+# Call Recording pixel feature for Dialer
+PRODUCT_COPY_FILES += \
+    vendor/moto/config/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
