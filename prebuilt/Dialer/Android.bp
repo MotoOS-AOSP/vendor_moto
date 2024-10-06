@@ -1,18 +1,12 @@
-android_app {
-    name: "HelloUI-Dialer", // Nombre del módulo APK
-    owner: "motorola",        // Indica que es un paquete customizado
-    srcs: ["HelloUI-Dialer.apk"],  // Ruta a tu APK
-
-    certificate: "platform", // Usa el certificado de plataforma AOSP para firmar
-    privileged: true,        // Indica que es una app de sistema privilegiada
-    product_specific: true,  // Instalación específica del producto
-    overrides: ["Dialer"],   // Reemplaza el módulo AOSP Dialer
-
-    dex_preopt: {
-        enabled: true,       // Habilitar precompilación de DEX para optimización
-    },
-
-    optimize: {
-        enabled: true,       // Optimiza el APK durante la construcción
-    },
+android_app_import {
+	name: "HelloUI-Dialer",
+	owner: "motorola",
+	apk: "HelloUI-Dialer.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
 }
+
+
