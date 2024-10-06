@@ -27,16 +27,19 @@ TARGET_PRODUCT_SHORT := $(subst MOTO_,,$(MOTO_BUILD))
 
 # OFFICIAL_DEVICES
 ifeq ($(MOTO_BUILD_TYPE), OFFICIAL)
-  LIST = $(shell cat vendor/moto/config/moto.devices)
-    ifeq ($(filter $(MOTO_BUILD), $(LIST)), $(MOTO_BUILD))
-      IS_OFFICIAL=true
-      MOTO_BUILD_TYPE := OFFICIAL
-    endif
-    ifneq ($(IS_OFFICIAL), true)
-      MOTO_BUILD_TYPE := UNOFFICIAL
-      $(error Device is not official "$(MOTO_BUILD)")
-    endif
+  LIST := $(shell cat vendor/moto/config/moto.devices)
+  ifneq ($(strip $(filter $(MOTO_BUILD), $(LIST))),)
+    IS_OFFICIAL=true
+    MOTO_BUILD_TYPE := OFFICIAL
+  else
+    IS_OFFICIAL=false
+  endif
+  ifneq ($(IS_OFFICIAL), true)
+    MOTO_BUILD_TYPE := UNOFFICIAL
+    $(error Device is not official "$(MOTO_BUILD)")
+  endif
 endif
+
 
 MOTO_VERSION := $(MOTOVERSION)-$(MOTO_BUILD)-$(MOTO_BUILD_DATE)-$(MOTO_BUILD_TYPE)
 MOTO_MOD_VERSION :=$(ANDROID_VERSION)-$(MOTOVERSION)
