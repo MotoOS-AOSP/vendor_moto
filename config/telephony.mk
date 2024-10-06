@@ -8,7 +8,8 @@ PRODUCT_COPY_FILES += \
 # Telephony packages
 PRODUCT_PACKAGES += \
     messaging \
-    Stk
+    Stk \
+    HelloUI-Dialer # motorola dialer app
 
 # World APN list
 PRODUCT_PACKAGES += \
