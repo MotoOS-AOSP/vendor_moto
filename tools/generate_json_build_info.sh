@@ -7,7 +7,7 @@ if [ "$1" ]; then
     echo "Generating .json"
     file_path=$1
     file_name=$(basename "$file_path")
-    DEVICE=$(echo $TARGET_PRODUCT | sed 's/MOTO_//g')
+    DEVICE=$(echo $TARGET_PRODUCT | sed 's/moto_//g')
     if [ -f $file_path ]; then
         # only generate for official builds. unless forced with 'export FORCE_JSON=1'
         if [[ $file_name == *"OFFICIAL"* ]] || [[ $FORCE_JSON == 1 ]]; then
