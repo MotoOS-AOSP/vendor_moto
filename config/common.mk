@@ -258,9 +258,9 @@ PRODUCT_PACKAGES += \
 
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    NexusLauncherRelease \
     Settings \
-    SystemUI
+    SystemUI \
+        # NexusLauncherRelease \
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
@@ -271,9 +271,9 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/moto/overlay/common \
 
 PRODUCT_PACKAGES += \
-    CustomFontPixelLauncherOverlay \
     DocumentsUIOverlay \
-    NetworkStackOverlay
+    NetworkStackOverlay \
+    # CustomFontPixelLauncherOverlay \
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/moto/build/target/product/security/moto
@@ -293,6 +293,9 @@ include vendor/moto/config/packages.mk
 
 # Moto libs
 $(call inherit-product, vendor/motorola/MotoSignatureApp/motosignatureapp.mk)
+
+# Moto Launcher3
+$(call inherit-product, vendor/motorola/Launcher3QuickStep/launcher3quickstep.mk)
 
 # Moto Game Mode
 $(call inherit-product, vendor/motorola/GameMode/gamemode.mk)
