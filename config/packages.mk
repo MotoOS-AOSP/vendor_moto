@@ -1,3 +1,3 @@
 # GameSpace
-PRODUCT_PACKAGES += \
-    GameSpace
+# PRODUCT_PACKAGES += \
+#     GameSpace
