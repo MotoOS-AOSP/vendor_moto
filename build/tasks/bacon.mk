@@ -16,7 +16,7 @@
 # -----------------------------------------------------------------
 # MOTO OTA update package
 
-MOTO_TARGET_PACKAGE := $(PRODUCT_OUT)/MotoOS-AOSP-$(MOTO_VERSION).zip
+MOTO_TARGET_PACKAGE := $(PRODUCT_OUT)/MotOS-AOSP-$(MOTO_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
@@ -25,8 +25,9 @@ CL_PRP="\033[35m"
 
 .PHONY: bacon
 bacon: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(MOTO_TARGET_PACKAGE)
+	$(hide) mv -f $(INTERNAL_OTA_PACKAGE_TARGET) $(MOTO_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(MOTO_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(MOTO_TARGET_PACKAGE).sha256sum
+	$(hide) rm -rf $(call intermediates-dir-for,PACKAGING,target_files)
 	$(hide) ./vendor/moto/tools/generate_json_build_info.sh $(MOTO_TARGET_PACKAGE)
 	echo -e ${CL_BLD}${CL_CYN}"===============================-Package complete-==============================="${CL_CYN}
 	echo -e ${CL_BLD}${CL_CYN}"Datetime :"${CL_PRP}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.build.date.utc | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
