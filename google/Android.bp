@@ -1,0 +1,17 @@
+android_app_import {
+    name: "LatinIMEGooglePrebuilt",
+    owner: "google",
+    apk: "Gboard/product/app/LatinIMEGooglePrebuilt/LatinIMEGooglePrebuilt.apk",
+    preprocessed: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+prebuilt_overlay {
+    name: "GboardOverlay",
+    product_specific: true,
+    srcs: ["Gboard/overlay/res/**/*"],
+    installable: true,
+}

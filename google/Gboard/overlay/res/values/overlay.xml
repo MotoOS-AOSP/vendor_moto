@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Activar el tema Light Gradient en Gboard -->
+    <bool name="config_enableLightTheme">true</bool>
+
+    <!-- Configuración de los colores del tema degradado claro -->
+    <color name="keyboard_background">#FFFFFF</color>
+    <color name="keyboard_foreground">#000000</color>
+    <color name="keyboard_gradient_start">#FFFFFF</color>
+    <color name="keyboard_gradient_end">#E0E0E0</color>
+
+    <!-- Personalización de las teclas -->
+    <color name="key_background">#F5F5F5</color>
+    <color name="key_foreground">#000000</color>
+    <color name="key_highlight">#D6D6D6</color>
+
+    <!-- Mostrar el menú de emojis en Gboard -->
+    <bool name="config_enableEmojiKeyboard">true</bool>
+    
+    <!-- Mostrar el menú de numeración en el teclado -->
+    <bool name="config_showNumberRow">true</bool>
+
+</resources>
