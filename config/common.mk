@@ -294,8 +294,6 @@ include vendor/moto/config/packages.mk
 # Moto libs
 $(call inherit-product, vendor/motorola/MotoSignatureApp/motosignatureapp.mk)
 
-# Moto Launcher3
-$(call inherit-product, vendor/motorola/Launcher3QuickStep/launcher3quickstep.mk)
 
 # Moto Game Mode
 $(call inherit-product, vendor/motorola/GameMode/gamemode.mk)

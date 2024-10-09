@@ -28,6 +28,7 @@
         <item>com.google.android.googlequicksearchbox</item> <!--­ Google Launcher -->
         <item>com.google.android.launcher</item> <!--­ Google Launcher -->
         <item>com.android.launcher3</item> <!-- AOSP Launcher -->
+        <item>com.motorola.launcher3</item> <!-- Motorola Launcher -->
         <item>com.google.android.dialer</item> <!--­ Google dialer to enable making phone calls -->
         <item>com.android.dialer</item> <!-- AOSP dialer -->
         <item>com.google.android.apps.messaging</item> <!-- Google messaging to enable text messaging -->
