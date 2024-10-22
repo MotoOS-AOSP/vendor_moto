@@ -41,10 +41,7 @@ $(call inherit-product, vendor/moto/audio/audio.mk)
 PRODUCT_COPY_FILES += \
     vendor/moto/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/moto/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/moto/prebuilt/common/bin/50-moto.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-moto.sh
 
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/addon.d/50-moto.sh
 
 ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
