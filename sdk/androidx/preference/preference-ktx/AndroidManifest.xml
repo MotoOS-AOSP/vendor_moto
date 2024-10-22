@@ -3,11 +3,7 @@
     package="androidx.preference.ktx" >
 
     <uses-sdk
-<<<<<<< HEAD
         android:minSdkVersion="21"
-=======
-        android:minSdkVersion="14"
->>>>>>> 4a52273c (Import prebuilt preference-ktx library)
         android:targetSdkVersion="31" />
 
 </manifest>
