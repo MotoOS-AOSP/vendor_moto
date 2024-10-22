@@ -290,6 +290,8 @@ PRODUCT_COPY_FILES += \
 include vendor/moto/config/ota.mk
 include vendor/moto/config/packages.mk
 
+# Google Apps
+$(call inherit-product, vendor/gms/products/gms.mk)
 
 # Moto libs
 $(call inherit-product, vendor/motorola/MotoSignatureApp/motosignatureapp.mk)
